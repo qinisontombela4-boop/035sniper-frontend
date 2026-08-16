@@ -4,8 +4,8 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';export default function Dashboard() {
   const [signals, setSignals] = useState([]);
   const [mt5Data, setMt5Data] = useState({});  useEffect(() => {
-    axios.get('https://your-backend.up.railway.app/api/signals').then(res => setSignals(res.data));
-    axios.get('https://your-backend.up.railway.app/api/mt5-data').then(res => setMt5Data(res.data));
+    axios.get('https://035sniper-backend-production.up.railway.app/api/signals').then(res => setSignals(res.data));
+    axios.get('https://035sniper-backend-production.up.railway.app/api/mt5-data').then(res => setMt5Data(res.data));
   }, []);  return (
     <div className="bg-black text-gold min-h-screen p-4">
       <h1 className="text-2xl">Signals</h1>
